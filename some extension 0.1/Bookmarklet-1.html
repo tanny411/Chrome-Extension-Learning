@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bookmarklet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <h1>
+        Bookmarklet
+    </h1>
+    <p>
+        <!-- implicit self calling function -->
+        This is a <a href="javascript:
+        (
+            function(){
+                alert(1);
+            }
+        )();">"Click"</a>
+    </p>
+    <h6>
+        <a href="javascript:
+        (function(){
+            let script=document.createElement('script');
+            var url='Bookmarklet-1.js';
+            script.src=url +'?'+ new Date().getTime();
+            document.body.appendChild(script);
+        })();">
+        <!-- to avoid caching, use random number get request -->
+            TRY ME!
+        </a>
+    </h6>
+</body>
+</html>
