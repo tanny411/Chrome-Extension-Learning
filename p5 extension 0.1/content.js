@@ -1,10 +1,10 @@
 console.log("content script running!");
+document.body.style.userSelect="none";//doesnt work!
 
 var s = function(sketch){
 
     sketch.setup=function(){
         //console.log('Sketch Started');
-        document.body.style['userSelect'] = 'none';
         let h=document.body.clientHeight;
         let w=document.body.clientWidth;
         // or sketch.windowWidth
