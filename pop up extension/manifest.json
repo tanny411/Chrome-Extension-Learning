@@ -19,7 +19,10 @@
             "background.js"
         ]
     },
+    "permissions":["tabs"],
     "browser_action":{
-        "default_icon": "ct.png"
+        "default_icon": "ct.png",
+        "default_popup":"popup.html",
+        "default_title":"A popup will come here!"
     }
 }
